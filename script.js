@@ -97,15 +97,23 @@
   var glow = $('#cursorGlow');
   window.addEventListener('mousemove', function (e) { glow.style.left = e.clientX + 'px'; glow.style.top = e.clientY + 'px'; }, { passive: true });
 
-  /* ---------- Hero photo 3D tilt ---------- */
-  var tilt = $('#tilt');
+  /* ---------- Character: head + eyes follow mouse, parallax ---------- */
+  var tilt = $('#tilt'), head = $('#head'), scene = $('#scene'), pupils = $$('.pupil');
   if (tilt && window.matchMedia('(hover:hover)').matches) {
     var hero = $('#home');
     hero.addEventListener('mousemove', function (e) {
       var r = hero.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
-      tilt.style.transform = 'perspective(900px) rotateY(' + (x * 14) + 'deg) rotateX(' + (-y * 12) + 'deg)';
+      tilt.style.transform = 'perspective(1000px) rotateY(' + (x * 8) + 'deg) rotateX(' + (-y * 6) + 'deg)';
+      if (head) head.style.transform = 'rotate(' + (x * 14) + 'deg) translate(' + (x * 6) + 'px,' + (y * 3) + 'px)';
+      if (scene) scene.style.transform = 'translate(' + (-x * 10) + 'px,' + (-y * 4) + 'px)';
+      pupils.forEach(function (pp) { pp.style.transform = 'translate(' + (x * 7) + 'px,' + (y * 5) + 'px)'; });
     });
-    hero.addEventListener('mouseleave', function () { tilt.style.transform = ''; });
+    hero.addEventListener('mouseleave', function () {
+      tilt.style.transform = '';
+      if (head) head.style.transform = '';
+      if (scene) scene.style.transform = '';
+      pupils.forEach(function (pp) { pp.style.transform = ''; });
+    });
   }
 
   /* ---------- Skill card tilt ---------- */
