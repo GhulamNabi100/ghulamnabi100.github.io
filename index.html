@@ -70,10 +70,147 @@
         </div>
 
         <div class="hero-visual reveal" id="tilt">
-          <div class="photo-ring"></div>
-          <div class="photo-frame">
-            <img src="github_profile_photo.jpg" alt="Ghulam Nabi profile photo" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" />
-            <div class="photo-fallback">GN</div>
+          <div class="stage" id="stage">
+            <svg id="char" viewBox="0 0 520 620" role="img" aria-label="Cartoon avatar of Ghulam Nabi standing beside a desk with a monitor">
+              <defs>
+                <linearGradient id="screenG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b2a22"/><stop offset="1" stop-color="#0a1020"/></linearGradient>
+                <radialGradient id="floorG" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#22f0a8" stop-opacity=".45"/><stop offset="1" stop-color="#22f0a8" stop-opacity="0"/></radialGradient>
+                <linearGradient id="blazerG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#2e3446"/><stop offset=".5" stop-color="#3a4157"/><stop offset="1" stop-color="#262b3b"/></linearGradient>
+                <linearGradient id="deskG" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b4a32"/><stop offset="1" stop-color="#4a3222"/></linearGradient>
+
+                <linearGradient id="suitG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#16213f"/><stop offset=".45" stop-color="#26376b"/><stop offset="1" stop-color="#141d38"/></linearGradient>
+                <linearGradient id="sleeveG" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#18244a"/><stop offset=".5" stop-color="#2a3c74"/><stop offset="1" stop-color="#18244a"/></linearGradient>
+                <linearGradient id="tieG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f4180"/><stop offset="1" stop-color="#1b2755"/></linearGradient>
+                <radialGradient id="faceG" cx="38%" cy="32%" r="75%"><stop offset="0" stop-color="#dba074"/><stop offset=".6" stop-color="#c68a5e"/><stop offset="1" stop-color="#a26a45"/></radialGradient>
+                <linearGradient id="hairG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a2d27"/><stop offset=".5" stop-color="#1a1412"/><stop offset="1" stop-color="#0d0908"/></linearGradient>
+                <linearGradient id="lensG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7a5230"/><stop offset=".55" stop-color="#3a2415"/><stop offset="1" stop-color="#1e1109"/></linearGradient>
+                <linearGradient id="goldG" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f3d98b"/><stop offset=".5" stop-color="#c9a24a"/><stop offset="1" stop-color="#8f6d25"/></linearGradient>
+              </defs>
+
+              <!-- floor glow -->
+              <ellipse cx="260" cy="560" rx="240" ry="40" fill="url(#floorG)"/>
+              <ellipse cx="200" cy="556" rx="90" ry="12" fill="#000" opacity=".45"/>
+
+              <!-- wall sign -->
+              <g id="scene">
+                <text x="340" y="212" class="sign" font-family="JetBrains Mono, monospace" font-size="13" letter-spacing="3" fill="#22f0a8">GHULAM NABI</text>
+                <rect x="338" y="219" width="132" height="2" rx="1" fill="#22f0a8" opacity=".5"/>
+
+                <!-- chair -->
+                <g>
+                  <rect x="318" y="300" width="62" height="130" rx="22" fill="#171c2b" stroke="#2c344b" stroke-width="2"/>
+                  <rect x="305" y="428" width="98" height="24" rx="12" fill="#1b2133" stroke="#2c344b" stroke-width="2"/>
+                  <rect x="349" y="452" width="10" height="70" fill="#2c344b"/>
+                  <path d="M310 536 L398 536" stroke="#2c344b" stroke-width="8" stroke-linecap="round"/>
+                  <circle cx="314" cy="546" r="6" fill="#0c0f18"/><circle cx="354" cy="546" r="6" fill="#0c0f18"/><circle cx="394" cy="546" r="6" fill="#0c0f18"/>
+                </g>
+
+                <!-- desk + monitor -->
+                <g>
+                  <rect x="300" y="396" width="200" height="12" rx="4" fill="url(#deskG)"/>
+                  <rect x="310" y="408" width="10" height="146" fill="#3a281b"/><rect x="480" y="408" width="10" height="146" fill="#3a281b"/>
+                  <rect x="388" y="358" width="16" height="38" fill="#1a1f2e"/>
+                  <rect x="366" y="392" width="62" height="6" rx="3" fill="#1a1f2e"/>
+                  <rect x="318" y="238" width="160" height="122" rx="9" fill="#0b0f1a" stroke="#2c344b" stroke-width="3"/>
+                  <rect x="327" y="247" width="142" height="104" rx="5" fill="url(#screenG)"/>
+                  <text x="398" y="287" text-anchor="middle" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="30" fill="#22f0a8">GN</text>
+                  <g class="code">
+                    <rect x="338" y="300" width="60" height="4" rx="2" fill="#22f0a8"/>
+                    <rect x="338" y="312" width="94" height="4" rx="2" fill="#7c5cff"/>
+                    <rect x="338" y="324" width="74" height="4" rx="2" fill="#22f0a8"/>
+                    <rect x="338" y="336" width="40" height="4" rx="2" fill="#7c5cff"/>
+                    <rect class="cursor" x="384" y="334" width="6" height="8" fill="#e8ecf6"/>
+                  </g>
+                  <rect x="356" y="384" width="82" height="8" rx="3" fill="#202638"/>
+                </g>
+              </g>
+
+              <!-- character -->
+              <g id="body">
+                <!-- legs + shoes -->
+                <rect x="163" y="404" width="36" height="140" rx="12" fill="#18234a"/>
+                <rect x="203" y="404" width="36" height="140" rx="12" fill="#1c2956"/>
+                <rect x="196" y="410" width="4" height="130" fill="#0f1733" opacity=".7"/>
+                <path d="M153 544 Q153 528 176 531 L204 534 L204 552 L153 552 Z" fill="#0b0d13"/>
+                <path d="M198 534 L226 531 Q250 528 250 544 L250 552 L198 552 Z" fill="#0b0d13"/>
+                <path d="M160 536 Q175 530 192 534" stroke="#fff" stroke-opacity=".25" stroke-width="2" fill="none"/>
+                <rect x="153" y="548" width="97" height="5" rx="2" fill="#3a2e28"/>
+
+                <!-- his right arm (viewer left) -->
+                <path d="M150 264 Q120 330 126 384" stroke="url(#sleeveG)" stroke-width="38" stroke-linecap="round" fill="none"/>
+                <rect x="109" y="376" width="34" height="14" rx="4" fill="#f4f6fb"/>
+                <circle cx="126" cy="383" r="3.2" fill="url(#goldG)"/>
+                <circle cx="126" cy="408" r="15" fill="var(--skin,#c68a5e)"/>
+
+                <!-- waistcoat -->
+                <path d="M140 266 Q140 238 168 234 L234 234 Q262 238 262 266 L258 424 L144 424 Z" fill="url(#suitG)"/>
+                <path d="M180 262 L201 322 L222 262 L226 424 L176 424 Z" fill="#0f1733"/>
+                <circle cx="201" cy="350" r="3.6" fill="url(#goldG)"/><circle cx="201" cy="376" r="3.6" fill="url(#goldG)"/><circle cx="201" cy="402" r="3.6" fill="url(#goldG)"/>
+                <!-- shirt -->
+                <path d="M178 234 L201 304 L224 234 Z" fill="#f4f6fb"/>
+                <path d="M180 232 L199 247 L186 258 Z" fill="#fff"/><path d="M222 232 L203 247 L216 258 Z" fill="#fff"/>
+                <!-- tie -->
+                <path d="M194 242 L208 242 L205 255 L197 255 Z" fill="url(#tieG)"/>
+                <path d="M197 255 L205 255 L211 314 L201 326 L191 314 Z" fill="url(#tieG)"/>
+                <g fill="#c9a24a"><circle cx="201" cy="272" r="2.4"/><circle cx="201" cy="288" r="3"/><circle cx="198" cy="303" r="2.2"/><circle cx="204" cy="303" r="2.2"/><circle cx="201" cy="316" r="2"/></g>
+                <!-- lapels -->
+                <path d="M168 234 L201 316 L184 336 L148 268 Z" fill="#2a3c72"/>
+                <path d="M234 234 L201 316 L218 336 L256 268 Z" fill="#2a3c72"/>
+                <path d="M168 234 L201 316" stroke="#4a5f9e" stroke-width="1.5" opacity=".7"/>
+                <path d="M234 234 L201 316" stroke="#4a5f9e" stroke-width="1.5" opacity=".7"/>
+                <!-- brooches + pocket square -->
+                <circle cx="236" cy="266" r="5.5" fill="url(#goldG)"/><circle cx="236" cy="266" r="2" fill="#fff" opacity=".6"/>
+                <circle cx="228" cy="322" r="6" fill="url(#goldG)"/><circle cx="228" cy="322" r="2.4" fill="#fff" opacity=".5"/>
+                <path d="M222 292 L240 284 L250 290 L248 304 L228 306 Z" fill="#26376b" stroke="#c9a24a" stroke-width="1.5"/>
+                <path d="M230 298 L244 292" stroke="#c9a24a" stroke-width="1.5"/>
+                <rect x="146" y="418" width="110" height="8" fill="#0b1230"/>
+
+                <!-- waving arm (with gold watch) -->
+                <g class="wave" style="transform-origin:252px 262px">
+                  <path d="M252 264 Q282 330 262 384" stroke="url(#sleeveG)" stroke-width="38" stroke-linecap="round" fill="none"/>
+                  <rect x="244" y="376" width="36" height="14" rx="4" fill="#f4f6fb"/>
+                  <rect x="246" y="389" width="32" height="8" rx="3" fill="url(#goldG)"/>
+                  <circle cx="262" cy="408" r="15" fill="var(--skin,#c68a5e)"/>
+                </g>
+
+                <!-- head -->
+                <g id="head" style="transform-origin:201px 232px">
+                  <rect x="188" y="206" width="26" height="40" rx="8" fill="var(--skin-dark,#a86f47)"/>
+                  <ellipse cx="149" cy="166" rx="9" ry="15" fill="var(--skin,#c68a5e)"/>
+                  <ellipse cx="253" cy="166" rx="9" ry="15" fill="var(--skin,#c68a5e)"/>
+                  <ellipse cx="201" cy="160" rx="52" ry="60" fill="url(#faceG)"/>
+                  <!-- nose shading -->
+                  <path d="M201 160 Q195 180 204 182" stroke="#a26a45" stroke-width="3" fill="none" stroke-linecap="round"/>
+                  <!-- stubble + mustache -->
+                  <path d="M150 168 Q150 228 201 240 Q252 228 252 168 Q246 202 226 208 Q214 213 201 212 Q188 213 176 208 Q156 202 150 168 Z" fill="#1a1412" opacity=".9"/>
+                  <path d="M177 194 Q189 184 201 190 Q213 184 225 194 Q213 203 201 199 Q189 203 177 194 Z" fill="#1a1412"/>
+                  <path d="M191 206 Q201 210 211 206" stroke="#6b3a28" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                  <path d="M193 220 Q201 227 209 220 Q201 223 193 220 Z" fill="#1a1412"/>
+                  <!-- brows -->
+                  <path d="M163 143 Q180 135 198 141" stroke="#1a1412" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+                  <path d="M204 141 Q222 135 239 143" stroke="#1a1412" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+                  <!-- aviator sunglasses -->
+                  <g class="glasses" stroke="url(#goldG)" stroke-width="3" stroke-linejoin="round">
+                    <path d="M159 148 Q180 142 199 148 Q200 176 182 180 Q160 177 159 148 Z" fill="url(#lensG)"/>
+                    <path d="M203 148 Q222 142 243 148 Q242 177 220 180 Q202 176 203 148 Z" fill="url(#lensG)"/>
+                    <path d="M199 150 Q201 146 203 150" fill="none"/>
+                    <path d="M159 150 L150 156 M243 150 L252 156" fill="none"/>
+                  </g>
+                  <path class="pupil" d="M167 153 L178 150" stroke="#fff" stroke-opacity=".4" stroke-width="3" stroke-linecap="round"/>
+                  <path class="pupil" d="M211 150 L222 153" stroke="#fff" stroke-opacity=".4" stroke-width="3" stroke-linecap="round"/>
+                  <!-- hair: faded sides + big quiff -->
+                  <path d="M147 160 Q138 112 168 96 Q176 128 154 160 Z" fill="#241b17"/>
+                  <path d="M255 160 Q264 112 234 96 Q226 128 248 160 Z" fill="#241b17"/>
+                  <path d="M150 140 Q136 90 178 72 Q216 56 246 78 Q272 100 252 146 Q246 118 232 112 Q201 100 170 112 Q154 120 150 140 Z" fill="url(#hairG)"/>
+                  <path d="M168 94 Q200 68 238 92" stroke="#5a463c" stroke-width="3" fill="none" stroke-linecap="round" opacity=".7"/>
+                  <path d="M178 84 Q204 70 232 84" stroke="#6b5448" stroke-width="2" fill="none" stroke-linecap="round" opacity=".6"/>
+                </g>
+              </g>
+            </svg>
+
+            <div class="photo-badge" title="The real me">
+              <img src="github_profile_photo.jpg" alt="Ghulam Nabi" onerror="this.parentNode.style.display='none'" />
+            </div>
           </div>
           <div class="chip chip-1 mono">🛡️ Cybersecurity</div>
           <div class="chip chip-2 mono">🐍 Python</div>
