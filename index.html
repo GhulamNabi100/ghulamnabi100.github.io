@@ -3,6 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Analytics 4 : replace BOTH G-CSNR4057MJ with your Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSNR4057MJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CSNR4057MJ');
+  </script>
+
   <title>Ghulam Nabi | Cybersecurity, Web & Design</title>
   <meta name="description" content="Ghulam Nabi - Cybersecurity learner, Python automation, web developer and graphic designer. I build websites, automate work and design brands." />
   <meta name="theme-color" content="#070a12" />
@@ -315,5 +325,54 @@
   </footer>
 
   <script src="script.js"></script>
-</body>
-</html>
+
+  <!-- GA4 custom event tracking (aggregate behaviour only, no personal data) -->
+  <script>
+  (function () {
+    // Safe wrapper: does nothing if gtag is blocked (e.g. by an ad blocker)
+    function track(name, params) {
+      if (typeof gtag === 'function') { gtag('event', name, params || {}); }
+    }
+
+    // 1) Link clicks (WhatsApp, social, project links)
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest ? e.target.closest('a[href]') : null;
+      if (!a) return;
+      var href = a.getAttribute('href') || '';
+      if (href.charAt(0) === '#') return; // ignore in-page anchors
+
+      var location = 'other';
+      var project = a.closest('.project');
+      if (project) {
+        var h3 = project.querySelector('h3');
+        location = 'project: ' + (h3 ? h3.textContent.trim() : 'unknown');
+      } else if (a.closest('.contact-links')) { location = 'contact'; }
+      else if (a.closest('.nav')) { location = 'nav'; }
+      else if (a.closest('.hero')) { location = 'hero'; }
+
+      if (href.indexOf('wa.me') !== -1) {
+        track('whatsapp_click', { click_location: location });
+      } else {
+        var platform = 'external';
+        if (href.indexOf('github.com') !== -1) platform = 'github';
+        else if (href.indexOf('instagram.com') !== -1) platform = 'instagram';
+        else if (href.indexOf('linkedin.com') !== -1) platform = 'linkedin';
+        else if (href.indexOf('contra.com') !== -1) platform = 'contra';
+        else if (href.indexOf('replit.app') !== -1) platform = 'design_portfolio';
+        track('social_click', { platform: platform, click_location: location });
+      }
+    });
+
+    // 2) Theme toggle (light / dark)
+    var themeBtn = document.getElementById('themeToggle');
+    if (themeBtn) {
+      themeBtn.addEventListener('click', function () {
+        // wait one tick so script.js finishes switching the theme first
+        setTimeout(function () {
+          track('theme_toggle', { theme: document.documentElement.getAttribute('data-theme') });
+        }, 0);
+      });
+    }
+
+    // 3) Contact form submit (we do NOT send what the visitor typed)
+    var form = document.get
