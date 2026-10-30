@@ -305,3 +305,4 @@ body.menu-open .menu-links a:nth-child(4){transition-delay:.18s}body.menu-open .
 
 .pcard.nomedia::after{content:"";position:absolute;right:-6%;top:50%;width:54%;aspect-ratio:1;transform:translateY(-50%);background:radial-gradient(circle,rgba(231,163,168,.32),rgba(168,90,106,.12) 45%,transparent 68%);pointer-events:none;z-index:0}
 .string path{stroke:var(--gold)}
+ 
