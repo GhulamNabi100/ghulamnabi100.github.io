@@ -1,1 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ghulam Nabi | Creative Developer & Designer</title>
+  <meta name="description" content="Ghulam Nabi - creative developer, graphic designer and cybersecurity learner from Pakistan. I build digital worlds where design meets code." />
+  <meta name="theme-color" content="#efe9df" />
+  <meta property="og:title" content="Ghulam Nabi | Creative Developer & Designer" />
+  <meta property="og:image" content="images/ghulam.jpg" />
+  <link rel="icon" href="images/ghulam.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@500;700&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="loading">
 
+  <!-- SVG filter: melting / liquid distortion for the hero title -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <filter id="melt" x="-10%" y="-15%" width="120%" height="130%">
+      <feTurbulence id="turb" type="fractalNoise" baseFrequency="0.010 0.022" numOctaves="2" seed="4" result="n"/>
+      <feDisplacementMap id="disp" in="SourceGraphic" in2="n" scale="0" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
+
+  <!-- Preloader -->
+  <div class="loader" id="loader">
+    <div class="loader-count" id="loaderCount">0%</div>
+    <svg class="loader-arc" viewBox="0 0 50 50"><circle cx="25" cy="25" r="20" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-dasharray="80 126"/></svg>
+    <div class="loader-hello" id="loaderHello">hello</div>
+  </div>
+
+  <div class="cursor" id="cursor"></div>
+
+  <!-- Nav -->
+  <header class="nav" id="nav">
+    <a href="#home" class="nav-logo">ghulam<span>.</span></a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#work">WORK</a>
+      <a href="#about">ABOUT</a>
+      <a href="#expertise">EXPERTISE</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span><span></span></button>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <h1 class="hero-title" id="heroTitle" aria-label="Creative">CREATIVE</h1>
+        <div class="hero-sub">
+          <h2>DEVELOPER</h2>
+          <p class="mono">CODE · DESIGN · SECURITY</p>
+        </div>
+      </div>
+      <div class="hero-foot">
+        <div class="hero-left mono"><span class="dot-live"></span> ©2026 <em class="script">ghulam</em></div>
+        <div class="hero-mid mono">SCROLL TO EXPLORE<i></i></div>
+        <a href="#about" class="badge" aria-label="Scroll to about">
+          <svg viewBox="0 0 120 120" class="badge-ring">
+            <defs><path id="circ" d="M60,60 m-44,0 a44,44 0 1,1 88,0 a44,44 0 1,1 -88,0"/></defs>
+            <text font-family="JetBrains Mono, monospace" font-size="9" fill="currentColor"><textPath href="#circ" textLength="272" lengthAdjust="spacing">BASED IN PAKISTAN · OPEN FOR WORK · </textPath></text>
+          </svg>
+          <span class="badge-arrow">↘</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="wrap">
+        <div class="section-label"><span class="mono">01</span><h2 class="reveal">ABOUT ME</h2><i class="gold-line"></i></div>
+        <div class="about-grid">
+          <figure class="about-photo reveal">
+            <img src="images/ghulam.jpg" alt="Ghulam Nabi in white shirt and sunglasses, relaxing on an orange sofa" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'" />
+            <div class="photo-fallback">GN</div>
+            <figcaption class="mono">GHULAM NABI</figcaption>
+          </figure>
+          <div class="about-copy">
+            <p class="mono tag reveal">HELLO, I'M GHULAM NABI</p>
+            <h3 class="about-head reveal">I BUILD <span class="gold">DIGITAL WORLDS</span> WHERE DESIGN MEETS <span class="gold">CODE.</span></h3>
+            <p class="about-text reveal">I'm a creative developer and graphic designer from Pakistan. I design logos and brands, build fast animated websites for local businesses, automate boring work with Python and keep learning cybersecurity - always in authorized, ethical environments.</p>
+            <p class="about-text reveal">My belief is simple: <em>progress over perfection</em>. Every project is a chance to learn something new and ship something better than the last one.</p>
+            <dl class="facts reveal">
+              <div><dt class="mono">LOCATION</dt><dd>Pakistan</dd></div>
+              <div><dt class="mono">FOCUS</dt><dd>Web · Design · Security</dd></div>
+              <div><dt class="mono">LANGUAGES</dt><dd>Urdu · English</dd></div>
+              <div><dt class="mono">STATUS</dt><dd>Open for projects</dd></div>
+            </dl>
+            <a href="#contact" class="pill-btn reveal">Let's work together <span>↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERTISE -->
+    <section class="expertise" id="expertise">
+      <div class="wrap">
+        <div class="exp-grid">
+          <div class="exp-left">
+            <p class="mono tag reveal">02 / WHAT I DO</p>
+            <h2 class="exp-title reveal">MY<br/>EXPERTISE</h2>
+            <p class="exp-note reveal">I design and build digital experiences where design, code and security work as one.</p>
+            <div class="chips reveal"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>Photoshop</span><span>Illustrator</span><span>Excel</span><span>GitHub</span></div>
+          </div>
+          <ul class="exp-list" id="expList">
+            <li data-emoji="🌐" data-hue="40"><span class="n mono">01</span><div><h3>Creative Development</h3><p>Fast, animated websites - portfolios and restaurant ordering sites with WhatsApp checkout.</p></div><i>↗</i></li>
+            <li data-emoji="🎨" data-hue="280"><span class="n mono">02</span><div><h3>Graphic & Brand Design</h3><p>Logos, brand kits, menus and social posts that look premium and consistent.</p></div><i>↗</i></li>
+            <li data-emoji="🐍" data-hue="200"><span class="n mono">03</span><div><h3>Python Automation</h3><p>Scripts that save hours - files, spreadsheets, data cleanup and repetitive tasks.</p></div><i>↗</i></li>
+            <li data-emoji="🛡️" data-hue="150"><span class="n mono">04</span><div><h3>Cybersecurity</h3><p>Security fundamentals, phishing awareness and defensive practice content.</p></div><i>↗</i></li>
+            <li data-emoji="🤖" data-hue="330"><span class="n mono">05</span><div><h3>AI-Powered Workflows</h3><p>Using modern AI tools to move faster in content, design and development.</p></div><i>↗</i></li>
+          </ul>
+        </div>
+      </div>
+      <div class="float-card" id="floatCard"><span id="floatEmoji">🌐</span></div>
+    </section>
+
+    <!-- WORK (scroll-driven giant text) -->
+    <section class="work-intro" id="work">
+      <div class="work-sticky">
+        <p class="mono work-top">SCROLL TO EXPLORE MY</p>
+        <h2 class="giant" id="giantWork"><span>WORK</span></h2>
+        <i class="splash s1"></i><i class="splash s2"></i><i class="splash s3"></i><i class="splash s4"></i>
+        <div class="work-tags mono"><span>WEB</span><span>BRANDING</span><span>AUTOMATION</span><span>SECURITY</span><span>CONTENT</span></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects" id="projects">
+      <div class="wrap">
+        <div class="section-label"><span class="mono">03</span><h2 class="reveal">SELECTED PROJECTS</h2><i class="gold-line"></i></div>
+        <div class="featured">
+          <article class="feat reveal">
+            <button class="feat-img" data-full="images/munch-box.jpg" data-alt="The Munch Box - fast food and pizza ordering website shown on laptop, tablet and phone" aria-label="View The Munch Box design full size">
+              <img src="images/munch-box.jpg" alt="The Munch Box website design on laptop, tablet and phone" loading="lazy" />
+              <span class="zoom mono">VIEW FULL SIZE ↗</span>
+            </button>
+            <div class="feat-body">
+              <p class="mono tag">FEATURED · FAST FOOD &amp; PIZZA · FORT ABBAS</p>
+              <h3>THE MUNCH BOX</h3>
+              <p>A modern, responsive and fully functional food ordering website with a dark, premium look. Dynamic menu with categories, deals and offers, easy checkout and direct ordering through WhatsApp.</p>
+              <ul class="stack mono"><li>React</li><li>Next.js</li><li>Supabase</li><li>WhatsApp ordering</li><li>Mobile + Desktop</li></ul>
+            </div>
+          </article>
+
+          <article class="feat reverse reveal">
+            <button class="feat-img" data-full="images/yummy-bites.jpg" data-alt="Yummy Bites - restaurant website shown on laptop, tablet and phone" aria-label="View Yummy Bites design full size">
+              <img src="images/yummy-bites.jpg" alt="Yummy Bites website design on laptop, tablet and phone" loading="lazy" />
+              <span class="zoom mono">VIEW FULL SIZE ↗</span>
+            </button>
+            <div class="feat-body">
+              <p class="mono tag">FEATURED · RESTAURANT · FORT ABBAS</p>
+              <h3>YUMMY BITES</h3>
+              <p>A premium, bright and fully responsive restaurant website built to showcase homemade food - online ordering with multiple item selection, WhatsApp integration and smooth animations.</p>
+              <ul class="stack mono"><li>React</li><li>Next.js</li><li>Supabase</li><li>WhatsApp ordering</li><li>Mobile + Desktop</li></ul>
+            </div>
+          </article>
+        </div>
+
+        <p class="mono more-label reveal">MORE WORK</p>
+        <!-- To add a link: put the URL in data-url on the row -->
+        <ul class="proj-list" id="projList">
+          <li class="proj reveal" data-emoji="🍽️" data-hue="25" data-url="">
+            <span class="pn mono">01</span><h3>FOODISTAAN</h3><p>Restaurant ordering website - Fort Abbas &amp; Marot branches, WhatsApp ordering, 3D animations.</p><span class="cat mono">WEB · 2026</span><i>↗</i>
+          </li>
+          <li class="proj reveal" data-emoji="🥐" data-hue="35" data-url="">
+            <span class="pn mono">02</span><h3>USAMA BAKERS</h3><p>Sweets, bakers &amp; HotBites site - orange/black theme, 3D layouts, WhatsApp ordering.</p><span class="cat mono">WEB · 2026</span><i>↗</i>
+          </li>
+          <li class="proj reveal" data-emoji="🍔" data-hue="200" data-url="">
+            <span class="pn mono">03</span><h3>ALBATROSS</h3><p>Animated 3D rotating menu experience with an owner-editable database.</p><span class="cat mono">WEB · 2026</span><i>↗</i>
+          </li>
+          <li class="proj reveal" data-emoji="🍛" data-hue="45" data-url="">
+            <span class="pn mono">04</span><h3>AL-SOUDIA FOOD CLUB</h3><p>Ordering website plus logo clean-up into crisp vector SVG and PNG.</p><span class="cat mono">WEB + BRAND · 2026</span><i>↗</i>
+          </li>
+          <li class="proj reveal" data-emoji="🛡️" data-hue="150" data-url="">
+            <span class="pn mono">05</span><h3>MASTER-OF-HACK</h3><p>Premium cyber-style logo identity for a cybersecurity software house.</p><span class="cat mono">BRANDING · 2026</span><i>↗</i>
+          </li>
+          <li class="proj reveal" data-emoji="📱" data-hue="270" data-url="https://www.instagram.com/master.ofhack">
+            <span class="pn mono">06</span><h3>@MASTER.OFHACK</h3><p>Cybersecurity awareness posts and reels - phishing alerts, password safety, ethical hacking basics.</p><span class="cat mono">CONTENT · LIVE</span><i>↗</i>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process" id="process">
+      <div class="wrap">
+        <div class="section-label"><span class="mono">04</span><h2 class="reveal">HOW I WORK</h2><i class="gold-line"></i></div>
+        <div class="steps">
+          <div class="step reveal"><b class="mono">01</b><h3>DISCOVER</h3><p>We talk about your goals, audience and what success looks like.</p></div>
+          <div class="step reveal"><b class="mono">02</b><h3>DESIGN</h3><p>Layout, colors, logo and content direction - before any code.</p></div>
+          <div class="step reveal"><b class="mono">03</b><h3>BUILD</h3><p>Clean code, smooth animation, mobile-first and fast loading.</p></div>
+          <div class="step reveal"><b class="mono">04</b><h3>LAUNCH</h3><p>Testing, going live and support so everything keeps working.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <p class="mono tag reveal">05 / CONTACT</p>
+          <h2 class="contact-title reveal">Let's create <span class="gold">something meaningful.</span></h2>
+          <p class="contact-sub reveal">Have a project in mind, a question, or just want to say hi? I usually reply on WhatsApp.</p>
+          <ul class="contact-rows reveal">
+            <li><a href="https://wa.me/923414046318" target="_blank" rel="noopener"><span class="mono">WHATSAPP</span><b>+92 341 4046318</b><i>↗</i></a></li>
+            <li><a href="https://www.instagram.com/master.ofhack" target="_blank" rel="noopener"><span class="mono">INSTAGRAM</span><b>@master.ofhack</b><i>↗</i></a></li>
+            <li><a href="https://www.linkedin.com/in/ghulam-nabi-08228a441" target="_blank" rel="noopener"><span class="mono">LINKEDIN</span><b>Ghulam Nabi</b><i>↗</i></a></li>
+            <li><a href="https://github.com/GhulamNabi100" target="_blank" rel="noopener"><span class="mono">GITHUB</span><b>GhulamNabi100</b><i>↗</i></a></li>
+          </ul>
+        </div>
+        <form class="form reveal" id="contactForm">
+          <label><span class="mono">NAME</span><input id="cName" required placeholder="Your name" /></label>
+          <label><span class="mono">WHAT DO YOU NEED?</span><input id="cNeed" required placeholder="Website, logo, automation…" /></label>
+          <label><span class="mono">MESSAGE</span><textarea id="cMsg" rows="4" placeholder="Tell me about your project"></textarea></label>
+          <button class="send" type="submit">Send via WhatsApp <span>↗</span></button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <span class="script big">ghulam nabi</span>
+      <span class="mono">© <span id="year"></span> · BUILT WITH CURIOSITY · LEARNING · BUILDING · IMPROVING</span>
+      <a href="#home" class="mono top">BACK TO TOP ↑</a>
+    </div>
+  </footer>
+
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Project preview" hidden>
+    <button class="lb-close mono" id="lbClose" aria-label="Close preview">CLOSE ✕</button>
+    <img id="lbImg" alt="" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
