@@ -176,7 +176,7 @@
   /* =============== Expertise: physics icons (gravity, collisions, drag) =============== */
   (function physics() {
     var box = $('#physics'); if (!box || reduce) return;
-    var defs = [['H5', '#e8788f'], ['C3', '#b5446e'], ['JS', '#d98c9a'], ['Py', '#8e3b6b'], ['Ps', '#e29a7e'], ['Ai', '#a85a8f'], ['Git', '#c77d8f'], ['Xl', '#d4a5a5']];
+    var defs = [['H5', '#e879a6'], ['C3', '#8b5cf6'], ['JS', '#c79bf0'], ['Py', '#6d3fd1'], ['Ps', '#f0a9c0'], ['Ai', '#a85adf'], ['Git', '#d36fb0'], ['Xl', '#9a86e8']];
     var bodies = [], W = 0, H = 0, vis = false, drag = null, last = { x: 0, y: 0 }, mouse = { x: -999, y: -999 };
     function size() { W = box.clientWidth; H = box.clientHeight; }
     size(); window.addEventListener('resize', size);
@@ -226,7 +226,7 @@
   /* =============== Work: strips, drips, scroll-driven giant text =============== */
   var techs = ['HTML', 'CSS', 'JAVASCRIPT', 'PYTHON', 'PHOTOSHOP', 'ILLUSTRATOR', 'GITHUB', 'EXCEL'];
   $('#techTrack').innerHTML = techs.concat(techs, techs, techs).map(function (t) { return '<span>' + t + '</span>'; }).join('');
-  var svcs = ['BRANDING', 'WEB DEVELOPMENT', 'AUTOMATION', 'CYBERSECURITY', 'UI/UX'];
+  var svcs = ['PERSONAL PORTFOLIOS', 'SHOPIFY STORES', 'BUSINESS WEBSITES', 'BRANDING & LOGOS', 'AUTOMATION', 'CYBERSECURITY', 'UI/UX'];
   var svcHtml = svcs.map(function (t) { return '<span>' + t + '</span><b>✦</b>'; }).join('');
   $('#svcTrack').innerHTML = svcHtml + svcHtml + svcHtml + svcHtml;
   setInterval(function () {
@@ -281,7 +281,7 @@
   function openLb(src, alt) { lastFocus = document.activeElement; lbImg.src = src; lbImg.alt = alt || ''; lb.hidden = false; document.body.style.overflow = 'hidden'; $('#lbClose').focus(); }
   function closeLb() { if (lb.hidden) return; lb.hidden = true; lbImg.removeAttribute('src'); document.body.style.overflow = ''; if (lastFocus && lastFocus.focus) lastFocus.focus(); }
   lb.addEventListener('click', closeLb);
-  $$('.pc-badge[data-full]').forEach(function (b) { b.addEventListener('click', function () { openLb(b.dataset.full, b.dataset.alt); }); });
+  $$('.pc-badge[data-full], .screens-btn[data-full]').forEach(function (b) { b.addEventListener('click', function () { openLb(b.dataset.full, b.dataset.alt); }); });
   $$('.pcard').forEach(function (card) {
     var badge = $('.pc-badge[data-full]', card), media = $('.pc-media', card);
     if (badge && media) { media.style.cursor = 'pointer'; media.addEventListener('click', function () { badge.click(); }); }
